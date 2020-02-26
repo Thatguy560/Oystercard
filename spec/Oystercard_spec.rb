@@ -19,15 +19,13 @@ describe Oystercard do
     end
   end
 
-  it 'initially not in journey' do
-    expect(subject).not_to be_in_journey
-  end
-
+  
   it 'can touch in' do
     subject.top_up(Oystercard::MINIMUM_BALANCE)
     subject.touch_in(entry_station)
-    expect(subject).to be_in_journey
+    expect(subject.journey).to be_in_journey
   end
+  
 
   context 'when below minimum balance of £1' do
     it 'touch in method raises error' do
@@ -35,7 +33,7 @@ describe Oystercard do
     end
   end
 
-  it 'expects to make a charge when you touch out' do
+  it 'will charge me when I touch out' do
     expect { subject.touch_out(exit_station) }.to change{ subject.balance }.by(-Oystercard::MINIMUM_CHARGE)
   end
 
@@ -44,14 +42,14 @@ describe Oystercard do
   it "expects to know where I've travelled from" do
     subject.top_up(Oystercard::MAXIMUM_BALANCE)
     subject.touch_in(entry_station)
-    expect(subject.entry_station).to eq(entry_station)
+    expect(subject.journey.entry_station).to eq(entry_station)
   end
 
   it "can check my default journey history that should be empty" do  
-    expect(subject.journey_history).to eq []
+    expect(subject.journey.journey_history).to eq []
   end 
 
-  context "Testing a complete journey" do
+  context "that has completed a journey" do
     #creating a context block so the before block (that is right below this message) doesnt get applied to
     #the above tests. 
     before do
@@ -65,15 +63,15 @@ describe Oystercard do
       # we want the journey history (that can be accessed as its an attribute reader) to return the journey that
       # we just did. This means we need to push the entry station, and exit station, into a hash that is pushed
       # into an array that is @journey_history (see the def initialize in the oyster.rb)
-      expect(subject.journey_history).to eq [{entry_station => exit_station}]
+      expect(subject.journey.journey_history).to eq [{entry_station => exit_station}]
     end
 
-    it 'will return check that the journey array has one journey in it' do
-      expect(subject.journey_history.length).to eq 1
+    it 'will return that the journey array has one journey in it' do
+      expect(subject.journey.journey_history.length).to eq 1
     end
 
-    it 'can touch out' do
-      expect(subject).not_to be_in_journey
+    it 'can touch out and not be in journey' do
+      expect(subject.journey).not_to be_in_journey
     end
 
     it "expects to forget entry station when tapping out" do 
@@ -83,12 +81,3 @@ describe Oystercard do
     end
   end
 end
-
-
-
-
-
- # it 'deducts money from balance' do
-  #   subject.top_up(10)
-  #   expect(subject.deduct(5)).to eq(5)
-  # end
