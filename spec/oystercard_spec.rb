@@ -12,6 +12,11 @@ describe Oystercard do
     expect(subject.balance).to eq(5)
   end
 
+  it "has a maximum balance of £90." do
+    subject.top_up(Oystercard::MAXIMUM_BALANCE)
+    expect{subject.top_up(1)}.to raise_error "Maximum balance of £#{Oystercard::MAXIMUM_BALANCE} reached"
+  end
+
   it "wont let you travel unless you have the minimum balance of £1" do
     expect{ subject.touch_in(entry_station) }.to raise_error "Minimum balance of £#{Oystercard::MINIMUM_BALANCE} needed."
   end
@@ -20,10 +25,6 @@ describe Oystercard do
     #the above tests.
     before do
       subject.top_up(Oystercard::MAXIMUM_BALANCE)
-    end
-
-    it "has a maximum balance of £90." do
-      expect{subject.top_up(1)}.to raise_error "Maximum balance of £#{Oystercard::MAXIMUM_BALANCE} reached"
     end
 
     it "will allow you to check the Oystercard balance at any time." do

@@ -51,7 +51,7 @@ class Oystercard
   end
 
   def max_balance_reached
-    @balance == MAXIMUM_BALANCE
+    @balance >= MAXIMUM_BALANCE
   end
 
   def insufficient_funds
