@@ -20,60 +20,60 @@ I want money on my card
 ```
 In order to keep using public transport
 As a customer
-I want to add money to my card 
+I want to add money to my card
 ```
 ```
 In order to protect my money from theft or loss
 As a customer
-I want a maximum limit (of £90) on my card 
+I want a maximum limit (of £90) on my card
 ```
 ```
 In order to pay for my journey
 As a customer
-I need my fare deducted from my card 
+I need my fare deducted from my card
 ```
 ```
 In order to get through the barriers.
 As a customer
-I need to touch in and out. 
+I need to touch in and out.
 ```
 ```
 In order to pay for my journey
 As a customer
-I need to have the minimum amount (£1) for a single journey. 
+I need to have the minimum amount (£1) for a single journey.
 ```
 ```
 In order to pay for my journey
 As a customer
-When my journey is complete, I need the correct amount deducted from my card 
+When my journey is complete, I need the correct amount deducted from my card
 ```
 ```
 In order to pay for my journey
 As a customer
-I need to know where I've travelled from 
+I need to know where I've travelled from
 ```
 ```
 In order to know where I have been
 As a customer
-I want to see all my previous trips 
+I want to see all my previous trips
 ```
 ```
 In order to know how far I have travelled
 As a customer
-I want to know what zone a station is in 
+I want to know what zone a station is in
 ```
 ```
 In order to be charged correctly
 As a customer
-I need a penalty charge deducted if I fail to touch in or out 
+I need a penalty charge deducted if I fail to touch in or out
 ```
 ```
 In order to be charged the correct amount
 As a customer
-I need to have the correct fare calculated 
+I need to have the correct fare calculated
 ```
 
-# Running the program in irb 
+# Running the program in irb
 
 $ git clone https://github.com/Thatguy560/Oystercard-Redo.git
 
@@ -97,7 +97,7 @@ $ To find out the balance of your Oystercard at any point type in - oystercard.c
 
 $ To see all of your previous journeys or incompleted journeys type in - oystercard.journey_history
 
-# Example Usage 
+# Example Usage
 
 ```ruby
 
@@ -121,14 +121,14 @@ oystercard.journey_history
 
 ```
 
-# Check Test Coverage 
+# Check Test Coverage
 
 ```ruby
-Type 'bundle install' into terminal 
+Type 'bundle install' into terminal
 
-Type 'rspec' into terminal 
+Type 'rspec' into terminal
 
-Test Coverage 100.00% -- 125/125 lines in 7 files
+Test Coverage 100.00% -- 126/126 lines in 6 files
 ```
 
 # Testing Frameworks Used
