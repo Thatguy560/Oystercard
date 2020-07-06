@@ -1,6 +1,6 @@
 # Oystercard Challenge (Redo)
 
-![Screenshot](https://raw.githubusercontent.com/Thatguy560/Oystercard-Redo/master/Assets/Screenshot%202020-07-06%20at%2016.26.39.png)
+![Screenshot](https://raw.githubusercontent.com/Thatguy560/Oystercard-Redo/master/Assets/Screenshot%202020-07-06%20at%2016.32.21.png)
 
 **Requirements**
 
