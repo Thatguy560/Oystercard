@@ -45,5 +45,10 @@ describe Oystercard do
       subject.touch_out("London Liverpool Street")
       expect(subject.journey_history.length).to eq 1
     end 
+
+    it "if no journeys have been made yet it will tell you" do 
+      expect(subject.journey_history).to eq "No Journeys have been made yet on this Oystercard"
+    end
+
   end
 end

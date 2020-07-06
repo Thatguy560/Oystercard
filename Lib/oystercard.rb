@@ -32,7 +32,7 @@ class Oystercard
 
   def touch_out(exit_station)
     if @current_trip == nil 
-    new_journey
+    new_journey # Saves new journey even if you don't tap in at entry station.
     end
     @current_trip.finished_journey(exit_station)
     calculate_fare
@@ -41,7 +41,7 @@ class Oystercard
   end
 
   def journey_history
-    @journeys.each { |journey| puts journey }
+    @journeys.empty? ? "No Journeys have been made yet on this Oystercard" : @journeys.each { |journey| puts journey }
   end
 
   private 

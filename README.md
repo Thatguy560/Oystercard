@@ -73,19 +73,61 @@ I need to have the correct fare calculated
 
 # Running the program in irb 
 
-to write
+$ git clone https://github.com/Thatguy560/Oystercard-Redo.git
+
+$ cd Oystercard-Redo
+
+$ run bundle in Commandline (To install all the dependencies)
+
+$ Type irb in Commandline
+
+$ require './Lib/oystercard.rb'
+
+$ Instantiate a new instance of the Oystercard class with oystercard = Oystercard.new or you can create a new Oystercard with a balance of your choosing by typing in - oystercard = Oystercard.new(20)
+
+$ To top up your Oystercard type in - oystercard.top_up(10)
+
+$ To touch in at a station of your choice type in - oystercard.touch_in("Finsbury Park") # Whatever station you choose
+
+$ To touch out at a station of your choice type in - oystercard.touch_out("Old Street") # Whatever station you choose
+
+$ To find out the balance of your Oystercard at any point type in - oystercard.check_balance
+
+$ To see all of your previous journeys or incompleted journeys type in - oystercard.journey_history
 
 # Example Usage 
 
-to write
+```ruby
+
+oystercard = Oystercard.new(10)
+
+oystercard.top_up(20)
+
+oystercard.check_balance
+
+oystercard.touch_in("Finsbury Park")
+
+oystercard.touch_out("Old Street")
+
+oystercard.touch_in("Enfield Town")
+
+oystercard.touch_out("London Liverpool Street")
+
+oystercard.journey_history
+
+[<Journey:0x00007f83739d7b20 @entry_station="Finsbury Park", @exit_station="Old Street">, <Journey:0x00007f83748a2538 @entry_station="Enfield Town", @exit_station="London Liverpool Street">]
+
+```
 
 # Check Test Coverage 
 
-$ type bundle install in terminal 
+```ruby
+Type 'bundle install' into terminal 
 
-$ type rspec in terminal 
+Type 'rspec' into terminal 
 
-$ Test Coverage: 100.00% -- 123/123 lines in 7 files
+Test Coverage 100.00% -- 125/125 lines in 7 files
+```
 
 # Testing Frameworks Used
 

@@ -1,11 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Projects/Oystercard-Final/spec/journey_log_spec.rb": {
-        "lines": [
-
-        ]
-      },
       "/Users/student/Projects/Oystercard-Final/spec/journey_spec.rb": {
         "lines": [
           1,
@@ -108,7 +103,7 @@
           1,
           null,
           1,
-          5,
+          6,
           null,
           null,
           1,
@@ -133,6 +128,11 @@
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          1,
+          null,
           null,
           null,
           null
@@ -151,9 +151,9 @@
           1,
           null,
           1,
-          7,
-          7,
-          7,
+          8,
+          8,
+          8,
           null,
           null,
           1,
@@ -161,8 +161,8 @@
           null,
           null,
           1,
+          8,
           7,
-          6,
           null,
           null,
           1,
@@ -183,7 +183,7 @@
           null,
           null,
           1,
-          4,
+          5,
           null,
           null,
           1,
@@ -193,7 +193,7 @@
           null,
           null,
           1,
-          7,
+          8,
           null,
           null,
           1,
@@ -251,6 +251,6 @@
         ]
       }
     },
-    "timestamp": 1594041042
+    "timestamp": 1594049099
   }
 }
